@@ -1,12 +1,12 @@
 <template>
     <teleport to=".modals-container">
         <div
-        v-if="modelValue"
-          class="modal"
+            v-if="modelValue"
+            class="modal"
         >
             <h1>{{ title }}</h1>
             <slot />
-            <button @click="handleButtonClick">Hide Modal</button>
+            <button @click="$emit('update:modelValue',false)">Hide Modal</button>
         </div>
     </teleport>
 </template>
@@ -32,15 +32,15 @@ const props = defineProps({
     emits
 */
 
-const emit = defineEmits(['hideModal'])
+const emit = defineEmits(['update:modelValue'])
 
 /*
     handleButtonClick
 */
 
-const handleButtonClick = () => {
-    emit('hideModal')
-}
+// const handleButtonClick = () => {
+//     emit('update:modelValue',false)
+// }
 
 
 </script>
