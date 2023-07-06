@@ -3,9 +3,9 @@
         <h1>Modals</h1>
         <button @click="showModal = true">Show Modal</button>   
         <Modal
-          v-if="showModal" 
+          v-model="showModal" 
           @hideModal = "showModal = false"         
-          >            
+        >            
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque temporibus consequuntur, 
                 illum iste molestias cupiditate perspiciatis! Pariatur tempore, beatae, tenetur ipsam 
                 cupiditate dolor laboriosam autem ullam minus ad obcaecati provident!</p>
