@@ -24,6 +24,14 @@
                 cupiditate dolor laboriosam autem ullam minus ad obcaecati provident!</p>
         </component>  
     </div>
+    <div>
+        <button
+            class='counter-button' 
+            @click="increaseCounter(1)"
+            :class="{yellow : oddOrEven === 'odd'}">
+            {{ counterData.count }}
+        </button>
+    </div>
 </template>
 
 <script setup>
@@ -34,6 +42,7 @@
     import { ref } from 'vue'   
     import Modal from '@/components/Modal.vue'
     import ModalDark from '@/components/ModalDark.vue' 
+    import {useCounter} from '@/use/useCounter'
     
     
     /*
@@ -43,5 +52,25 @@
     const showDarkModals = ref(false)
     const showModal = ref(false)
 
+    /*
+        counter button
+    */
+
+    const {counterData, increaseCounter, oddOrEven} = useCounter()
+
+    
+
 </script>
+
+<style scoped>
+.counter-button {
+    font-size: 60px;
+    background-color: pink;
+    width: 100%;
+}
+
+.counter-button.yellow {
+    background-color: yellow
+}
+</style>
 
