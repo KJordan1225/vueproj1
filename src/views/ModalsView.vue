@@ -17,7 +17,7 @@
         </Modal>
         <component
           v-model="showModal" 
-          :is="showDarkModals ? ModalDark : Modal"                  
+          :is="showDarkModals ? ModalDark : Modal" 
         >            
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque temporibus consequuntur, 
                 illum iste molestias cupiditate perspiciatis! Pariatur tempore, beatae, tenetur ipsam 
@@ -33,9 +33,9 @@
     
     import { ref } from 'vue'   
     import Modal from '@/components/Modal.vue'
-    import ModalDark from '@/components/ModalDark.vue'     
-
-
+    import ModalDark from '@/components/ModalDark.vue' 
+    
+    
     /*
         Modals
     */
